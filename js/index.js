@@ -12,6 +12,10 @@ const contentSection1 = document.querySelector('.content-section')
 console.log(contentSection1)
 const heading = document.querySelector('h1.logo-heading')
 console.log(heading)
+const boatImg = document.querySelector('.content-destination img')
+console.log(boatImg)
+const letsGoHeader = document.querySelector('.content-section .text-content h2')
+console.log(letsGoHeader)
 
 
 // Events
@@ -66,3 +70,21 @@ function blackToBlue(event){
 
 document.addEventListener('keydown', funner)
 document.addEventListener('keyup', blackToBlue)
+
+window.addEventListener('load', radiusBoat)
+
+function radiusBoat(event){
+    console.log('load function working')
+    boatImg.style.borderRadius = '100px'
+}
+
+window.addEventListener('scroll', yellowFlicker)
+
+function yellowFlicker(event){
+    console.log('scroll function working')
+    if(letsGoHeader.style.color === 'black'){
+        letsGoHeader.style.color = 'yellow'
+    }else{
+        letsGoHeader.style.color = 'black'
+    }
+}
