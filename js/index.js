@@ -2,9 +2,11 @@
 console.log(document.all)
 // Selectors
 const footerSection = document.querySelector('.footer')
-console.log(footerSection);
+console.log(footerSection)
 const letsGoPicture = document.querySelector('.content-section .img-content img')
 console.log(letsGoPicture)
+const footerP = footerSection.querySelector('p')
+console.log(footerP)
 
 
 // Events
@@ -22,10 +24,6 @@ function colorChangeOnExit(event){
 
 letsGoPicture.addEventListener('click', radiusChange)
 
-// function radiusChange(event){
-//     letsGoPicture.style.borderRadius = '100px'
-// }
-
 function radiusChange(event){
     if(letsGoPicture.style.borderRadius === '10px'){
         letsGoPicture.style.borderRadius = '100px'
@@ -33,4 +31,10 @@ function radiusChange(event){
     } else {
         letsGoPicture.style.borderRadius = '10px'
     }    
+}
+
+footerP.addEventListener('mousemove', fontShrink)
+
+function fontShrink(event){
+    footerP.style.fontSize = '1rem'
 }
