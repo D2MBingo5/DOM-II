@@ -20,6 +20,7 @@ const adventureImg = contentSection1.nextElementSibling.querySelector('.content-
 console.log('adventure image', adventureImg)
 
 
+
 // Events
 footerSection.addEventListener('mouseover', colorChangeOnOver)
 footerSection.addEventListener('mouseout', colorChangeOnExit)
@@ -102,3 +103,29 @@ window.addEventListener('resize', resizeLetsGo)
 function resizeLetsGo(event){
     letsGoPicture.style.width = '50%'
 }
+
+// .preventDefault()
+const nav1 = document.querySelector('.nav-link')
+const nav2 = nav1.nextElementSibling
+const nav3 = nav2.nextElementSibling
+const nav4 = nav3.nextElementSibling
+console.log(nav1, nav2, nav3, nav4)
+
+nav1.addEventListener('click', prevent1)
+function prevent1(event){
+console.log('nav button clicked')
+event.preventDefault()}
+nav2.addEventListener('click', prevent2)
+function prevent2(event){
+console.log('nav button clicked')
+event.preventDefault()}
+nav3.addEventListener('click', prevent3)
+function prevent3(event){
+console.log('nav button clicked')
+event.preventDefault()}
+nav4.addEventListener('click', prevent4)
+function prevent4(event){
+console.log('nav button clicked')
+event.preventDefault()}
+
+// probably the wettest code i've ever written
