@@ -16,6 +16,8 @@ const boatImg = document.querySelector('.content-destination img')
 console.log(boatImg)
 const letsGoHeader = document.querySelector('.content-section .text-content h2')
 console.log(letsGoHeader)
+const adventureImg = contentSection1.nextElementSibling.querySelector('.content-section .img-content img')
+console.log('adventure image', adventureImg)
 
 
 // Events
@@ -87,4 +89,16 @@ function yellowFlicker(event){
     }else{
         letsGoHeader.style.color = 'black'
     }
+}
+
+adventureImg.addEventListener('dblclick', widthChange)
+
+function widthChange(event){
+    adventureImg.style.width = '50%'
+}
+
+window.addEventListener('resize', resizeLetsGo)
+
+function resizeLetsGo(event){
+    letsGoPicture.style.width = '50%'
 }
