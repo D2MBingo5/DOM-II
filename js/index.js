@@ -7,6 +7,8 @@ const letsGoPicture = document.querySelector('.content-section .img-content img'
 console.log(letsGoPicture)
 const footerP = footerSection.querySelector('p')
 console.log(footerP)
+const contentSection1 = document.querySelector('.content-section')
+console.log(contentSection1)
 
 
 // Events
@@ -25,6 +27,7 @@ function colorChangeOnExit(event){
 letsGoPicture.addEventListener('click', radiusChange)
 
 function radiusChange(event){
+    event.stopPropagation()
     if(letsGoPicture.style.borderRadius === '10px'){
         letsGoPicture.style.borderRadius = '100px'
         return
@@ -37,4 +40,10 @@ footerP.addEventListener('mousemove', fontShrink)
 
 function fontShrink(event){
     footerP.style.fontSize = '1rem'
+}
+
+contentSection1.addEventListener('click', marginDecrease)
+
+function marginDecrease(event){
+    contentSection1.style.margin = '10px 0'
 }
