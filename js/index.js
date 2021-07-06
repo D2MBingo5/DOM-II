@@ -1,5 +1,6 @@
 // Your code goes here
 console.log(document.all)
+
 // Selectors
 const footerSection = document.querySelector('.footer')
 console.log(footerSection)
@@ -9,6 +10,8 @@ const footerP = footerSection.querySelector('p')
 console.log(footerP)
 const contentSection1 = document.querySelector('.content-section')
 console.log(contentSection1)
+const heading = document.querySelector('h1.logo-heading')
+console.log(heading)
 
 
 // Events
@@ -47,3 +50,19 @@ contentSection1.addEventListener('click', marginDecrease)
 function marginDecrease(event){
     contentSection1.style.margin = '10px 0'
 }
+
+function funner(event){
+    if(event.keyCode === 70){ // f key
+      console.log('key pressed')
+      heading.textContent = 'Funner Bus'
+    }    
+}
+function blackToBlue(event){
+    if(event.keyCode === 70){ // f key
+        console.log('key lifted')
+        heading.style.color = 'blue'
+      }    
+}
+
+document.addEventListener('keydown', funner)
+document.addEventListener('keyup', blackToBlue)
